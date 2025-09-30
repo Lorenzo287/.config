@@ -1,0 +1,12 @@
+# Ignore plugin managers' downloaded files
+plugin/
+pack/
+site/
+lazy-lock.json
+
+# Swap/backup/undo files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.undo
