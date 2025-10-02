@@ -2,6 +2,7 @@
 plugin/
 pack/
 site/
+spell/
 lazy-lock.json
 
 # Swap/backup/undo files
