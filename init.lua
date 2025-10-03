@@ -24,11 +24,11 @@ vim.opt.scrolloff = 10
 vim.opt.confirm = true
 
 -- "za" to fold
-vim.opt.foldcolumn = "0"
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldlevel = 99
-vim.opt.foldenable = true
+vim.wo.foldenable = true
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.wo.foldlevel = 99
+vim.wo.foldcolumn = "0"
 
 vim.schedule(function()
 	vim.o.clipboard = "unnamedplus"
@@ -55,6 +55,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 require("config.lazy")
 require("terminal")
+require("cheat-sh")
 
 vim.keymap.set(
 	"n",
@@ -64,7 +65,7 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>s", function()
----@diagnostic disable-next-line: undefined-field
+	---@diagnostic disable-next-line: undefined-field
 	if vim.opt.spell:get() then
 		vim.opt.spell = false
 		print("Spell check OFF")

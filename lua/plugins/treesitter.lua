@@ -11,6 +11,7 @@ return {
 				disable = { "csv" },
 			},
 			indent = { enbale = true },
+			fold = { enable = true },
 		})
 	end,
 }
