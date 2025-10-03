@@ -80,6 +80,8 @@ local function run_cheat(query)
 	local cheat_query, ft = parse_query(query)
 	local url = "cheat.sh/" .. cheat_query .. "?T"
 
+	-- print("Fetching: " .. url)
+
 	vim.fn.jobstart({ "curl", "-s", url }, {
 		stdout_buffered = true,
 		on_stdout = function(_, data)
