@@ -10,3 +10,4 @@ lazy-lock.json
 *.bak
 *.tmp
 *.undo
+*.cache
