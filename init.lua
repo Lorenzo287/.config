@@ -6,7 +6,8 @@ vim.g.have_nerd_font = true
 vim.opt.winborder = "rounded"
 vim.opt.swapfile = false
 vim.opt.tabstop = 4
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.breakindent = true
 vim.opt.cursorcolumn = false
 vim.o.cursorline = false
 vim.opt.ignorecase = true
@@ -42,6 +43,7 @@ vim.keymap.set("n", "<c-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", "<cmd>wincmd l<CR>")
 vim.keymap.set("n", "<leader>w", "<cmd>write<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", "<cmd>quit<CR>", { desc = "Quit" })
+vim.keymap.set("n", "<leader>Q", "<cmd>wqa<CR>", { desc = "Quit all" })
 vim.keymap.set("n", "<leader>v", "<cmd>e $MYVIMRC<CR>", { desc = "Edit config" })
 -- vim.keymap.set({ "n", "v" }, "<leader>o", ":update<CR> :source<CR>", { desc = "Save and source file" })
 
