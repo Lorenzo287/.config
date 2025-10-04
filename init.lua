@@ -83,3 +83,7 @@ end, { desc = "Toggle spell check" })
 -- zg  Mark word as good (add to dictionary)
 -- zw  Mark word as wrong
 -- zug Undo 'good' word (remove from dictionary)
+
+vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'Normal' })
+vim.cmd("highlight FloatBorder guibg=NormalFloat")
+vim.cmd("highlight FloatTitle guibg=NormalFloat")

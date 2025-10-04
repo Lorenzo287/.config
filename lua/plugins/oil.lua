@@ -17,7 +17,7 @@ return {
 				show_hidden = true,
 			},
 			float = {
-				padding = 9,
+				padding = 8,
 			},
 		})
 		vim.keymap.set("n", "<leader>b", oil.toggle_float, { desc = "Toggle Oil" })
