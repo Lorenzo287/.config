@@ -61,9 +61,16 @@ require("cheat-sh")
 
 vim.keymap.set(
 	"n",
-	"<leader>m",
+	"<leader>mc",
 	"i#include <stdio.h><CR><CR>int main(void) {<CR>return 0;<CR>}<Esc>kO",
-	{ noremap = true, silent = true, desc = "Insert main()" }
+	{ noremap = true, silent = true, desc = "Insert main() C" }
+)
+
+vim.keymap.set(
+	"n",
+	"<leader>mp",
+	"i#include <bits/stdc++.h><CR>using namespace std;<CR><CR>int main() {<CR>return 0;<CR>}<Esc>kO",
+	{ noremap = true, silent = true, desc = "Insert main() C++" }
 )
 
 vim.keymap.set("n", "<leader>s", function()
@@ -84,6 +91,6 @@ end, { desc = "Toggle spell check" })
 -- zw  Mark word as wrong
 -- zug Undo 'good' word (remove from dictionary)
 
-vim.api.nvim_set_hl(0, 'NormalFloat', { link = 'Normal' })
+vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
 vim.cmd("highlight FloatBorder guibg=NormalFloat")
 vim.cmd("highlight FloatTitle guibg=NormalFloat")
